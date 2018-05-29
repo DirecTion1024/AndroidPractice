@@ -21,6 +21,7 @@ public class StopwatchActivity extends AppCompatActivity {
             seconds = savedInstanceState.getInt("seconds");
             running = savedInstanceState.getBoolean("running");
             wasRunning = savedInstanceState.getBoolean("wasRunning");
+
         }
         runTimer();
     }
