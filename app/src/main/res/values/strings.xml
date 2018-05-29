@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HeadFirst</string>
+    <string name="hello_world">HelloWorld</string>
+    <string name="button_text">Button</string>
+    <string-array name="string_array_name">
+        <item>light</item>
+        <item>amber</item>
+        <item>brown</item>
+        <item>dark</item>
+    </string-array>
+</resources>
