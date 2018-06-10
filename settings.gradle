@@ -1,1 +1,1 @@
-include ':app', ':message', ':stopwatch'
+include ':app', ':message', ':stopwatch', ':olddriver', ':starbuzz'
