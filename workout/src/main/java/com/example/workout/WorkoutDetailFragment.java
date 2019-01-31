@@ -18,6 +18,7 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class WorkoutDetailFragment extends Fragment {
+    private long workoutId;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,4 +27,7 @@ public class WorkoutDetailFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_workout_detail, container, false);
     }
 
+    public void setWorkoutId(long workoutId) {
+        this.workoutId = workoutId;
+    }
 }
