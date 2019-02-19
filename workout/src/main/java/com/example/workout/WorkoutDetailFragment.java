@@ -7,16 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link WorkoutDetailFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link WorkoutDetailFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class WorkoutDetailFragment extends Fragment {
     private long workoutId;
 
@@ -25,6 +18,18 @@ public class WorkoutDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_workout_detail, container, false);
+    }
+
+    public void onStart() {
+        super.onStart();
+        View view = getView();
+        if(view != null){
+            TextView title = view.findViewById(R.id.textTitle);
+            Workout workout = Workout.workout[(int) workoutId];
+            title.setText(workout.getName());
+            TextView description = view.findViewById(R.id.textDescription);
+            description.setText(workout.getDescription());
+        }
     }
 
     public void setWorkoutId(long workoutId) {
