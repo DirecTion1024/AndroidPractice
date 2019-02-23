@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 
@@ -25,7 +26,7 @@ public class WorkoutDetailFragment extends Fragment {
         View view = getView();
         if(view != null){
             TextView title = view.findViewById(R.id.textTitle);
-            Workout workout = Workout.workout[(int) workoutId];
+            Workout workout = Workout.workouts[(int) workoutId];
             title.setText(workout.getName());
             TextView description = view.findViewById(R.id.textDescription);
             description.setText(workout.getDescription());

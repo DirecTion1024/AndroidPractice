@@ -9,7 +9,7 @@ public class Workout {
         this.description = description;
     }
 
-    public static final Workout[] workout = {
+    public static final Workout[] workouts = {
             new Workout("name1","description1"),
             new Workout("name2","description2"),
             new Workout("name3","description3"),
